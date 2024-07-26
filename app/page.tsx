@@ -1,21 +1,25 @@
-import { BlogPosts } from 'app/components/posts'
+import { BlogPosts } from "app/components/posts";
 
 export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
+        Giselle Garcia
       </h1>
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        As an accomplished student with skills in R programming and laboratory
+        techniques, and a background in ecology, marine biology, and
+        environmental systems, I have developed a deep understanding of the
+        natural world and its complexities. With a passion for community
+        service, I have also contributed to the Pacific Beach community through
+        volunteer work and ocean clean-up efforts. Through my experiences, I
+        have gained valuable skills in project management, data analysis, and
+        collaboration, and I am eager to apply these skills to future endeavors
+        in the scientific and environmental fields.
       </p>
       <div className="my-8">
         <BlogPosts />
       </div>
     </section>
-  )
+  );
 }
