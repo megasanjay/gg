@@ -27,8 +27,8 @@ importers:
         specifier: ^1.0.9
         version: 1.0.12(next@14.2.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
       geist:
-        specifier: 1.2.2
-        version: 1.2.2(next@14.2.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
+        specifier: 1.4.2
+        version: 1.4.2(next@14.2.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
       next:
         specifier: '14'
         version: 14.2.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -365,10 +365,10 @@ packages:
   function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
 
-  geist@1.2.2:
-    resolution: {integrity: sha512-uRDrxhvdnPwWJmh+K5+/5LXSKwvJzaYCl9tDXgiBi4hj7hB4K7+n/WLcvJMFs5btvyn0r9OSwCd1s6CmqAsxEw==}
+  geist@1.4.2:
+    resolution: {integrity: sha512-OQUga/KUc8ueijck6EbtT07L4tZ5+TZgjw8PyWfxo16sL5FWk7gNViPNU8hgCFjy6bJi9yuTP+CRpywzaGN8zw==}
     peerDependencies:
-      next: '>=13.2.0 <15'
+      next: '>=13.2.0'
 
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
@@ -1073,7 +1073,7 @@ snapshots:
 
   function-bind@1.1.2: {}
 
-  geist@1.2.2(next@14.2.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)):
+  geist@1.4.2(next@14.2.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)):
     dependencies:
       next: 14.2.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
 
