@@ -23,8 +23,8 @@ export function Hero() {
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Button href="/#experience">View My Experience</Button>
-          <Button href="/resume.pdf" variant="secondary" download>
-            Download Resume
+          <Button href="/resume.pdf" variant="secondary" newTab>
+            View Resume
           </Button>
         </div>
       </div>
