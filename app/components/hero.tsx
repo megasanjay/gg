@@ -30,7 +30,7 @@ export function Hero() {
       </div>
       <Image
         src="/cropped_image.jpg"
-        alt="Giselle Garcia"
+        alt="Giselle Garcia, Environmental Compliance and Stormwater Management Specialist"
         width={320}
         height={320}
         priority

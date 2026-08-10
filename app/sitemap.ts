@@ -8,9 +8,14 @@ export default async function sitemap() {
     lastModified: post.metadata.publishedAt,
   }));
 
-  let routes = ["", "/blog"].map((route) => ({
-    url: `${baseUrl}${route}`,
+  let routes = [
+    { path: "", priority: 1.0 },
+    { path: "/blog", priority: 0.5 },
+  ].map(({ path, priority }) => ({
+    url: `${baseUrl}${path}`,
     lastModified: new Date().toISOString().split("T")[0],
+    changeFrequency: "monthly" as const,
+    priority,
   }));
 
   return [...routes, ...blogs];

@@ -22,7 +22,7 @@ export default function Footer() {
         <li>
           <a
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer me"
             target="_blank"
             href="https://www.linkedin.com/in/giselle-garcia-barroso/"
           >

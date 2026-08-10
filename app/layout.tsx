@@ -8,22 +8,48 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
 import { baseUrl } from "./sitemap";
 
+const title = "Giselle Garcia | Environmental Compliance & Stormwater Management";
+const description =
+  "Environmental compliance and stormwater management specialist in California. Experienced in CGP and Caltrans inspections, SWPPP development, water quality monitoring, and SMARTS regulatory reporting.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Giselle Garcia",
+    default: title,
     template: "%s | Giselle Garcia",
   },
-  description:
-    "Environmental compliance and stormwater management specialist based in California.",
+  description,
+  keywords: [
+    "Giselle Garcia",
+    "Environmental Compliance Specialist",
+    "Stormwater Management",
+    "SWPPP",
+    "Construction General Permit",
+    "CGP Inspector",
+    "Caltrans Standard Specifications Section 13",
+    "SMARTS",
+    "QSP",
+    "Water Quality Monitoring",
+    "Environmental Inspector California",
+  ],
+  authors: [{ name: "Giselle Garcia", url: baseUrl }],
+  creator: "Giselle Garcia",
+  publisher: "Giselle Garcia",
+  alternates: {
+    canonical: baseUrl,
+  },
   openGraph: {
-    title: "Giselle Garcia",
-    description:
-      "Environmental compliance and stormwater management specialist based in California.",
+    title,
+    description,
     url: baseUrl,
     siteName: "Giselle Garcia",
     locale: "en_US",
-    type: "website",
+    type: "profile",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
   },
   robots: {
     index: true,

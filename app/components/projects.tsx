@@ -33,7 +33,7 @@ export function Projects() {
         Featured Projects
       </h2>
       <p className="mb-8 text-neutral-600 dark:text-neutral-400">
-        A closer look at the work behind the résumé.
+        A closer look at the work behind the resume.
       </p>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {projects.map((project) => (
