@@ -6,6 +6,8 @@ import { Navbar } from "./components/nav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
+import Snow from "./components/snow";
+import BackToTop from "./components/back-to-top";
 import { baseUrl } from "./sitemap";
 
 const title = "Giselle Garcia | Environmental Compliance & Stormwater Management";
@@ -81,10 +83,12 @@ export default function RootLayout({
       )}
     >
       <body className="antialiased max-w-3xl mx-4 mt-8 lg:mx-auto">
+        <Snow />
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
           {children}
           <Footer />
+          <BackToTop />
           <Analytics />
           <SpeedInsights />
         </main>
