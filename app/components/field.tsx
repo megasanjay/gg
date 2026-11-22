@@ -17,24 +17,26 @@ export function Field() {
         From the field to compliance reporting
       </p>
       <p className="mb-8 text-neutral-800 dark:text-neutral-200">
-        My work combines field inspections, environmental monitoring,
-        regulatory requirements, and communication with project teams. Each
-        inspection provides information that must ultimately be documented
-        and translated into actionable compliance requirements.
+        My work combines field inspections, environmental monitoring, regulatory
+        requirements, and communication with project teams. Each inspection
+        provides information that must ultimately be documented and translated
+        into actionable compliance requirements.
       </p>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+      <ul role="list" className="grid grid-cols-2 gap-3 sm:grid-cols-3">
         {moments.map((moment) => (
-          <div
+          <li
             key={moment.label}
             className="flex flex-col items-center gap-2 rounded-lg border border-neutral-200 p-4 text-center dark:border-neutral-800"
           >
-            <span className="text-2xl">{moment.icon}</span>
+            <span aria-hidden="true" className="text-2xl">
+              {moment.icon}
+            </span>
             <span className="text-sm text-neutral-700 dark:text-neutral-300">
               {moment.label}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

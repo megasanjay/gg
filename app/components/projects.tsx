@@ -35,13 +35,13 @@ export function Projects() {
       <p className="mb-8 text-neutral-600 dark:text-neutral-400">
         A closer look at the work behind the resume.
       </p>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <ul role="list" className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {projects.map((project) => (
-          <div
+          <li
             key={project.number}
             className="rounded-lg border border-neutral-200 p-5 dark:border-neutral-800"
           >
-            <p className="text-sm text-neutral-500 dark:text-neutral-500">
+            <p className="text-sm text-neutral-500 dark:text-neutral-400">
               {project.number}
             </p>
             <h3 className="mt-1 mb-2 text-lg font-medium tracking-tight">
@@ -50,9 +50,9 @@ export function Projects() {
             <p className="text-sm text-neutral-700 dark:text-neutral-300">
               {project.body}
             </p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

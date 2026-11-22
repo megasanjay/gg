@@ -1,6 +1,9 @@
+import SnowToggle from "./snow-toggle";
+
 function ArrowIcon() {
   return (
     <svg
+      aria-hidden="true"
       width="12"
       height="12"
       viewBox="0 0 12 12"
@@ -18,30 +21,37 @@ function ArrowIcon() {
 export default function Footer() {
   return (
     <footer className="mb-16">
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer me"
-            target="_blank"
-            href="https://www.linkedin.com/in/giselle-garcia-barroso/"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">LinkedIn</p>
-          </a>
-        </li>
-        <li className="hidden">
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://vercel.com/templates/next.js/portfolio-starter-kit"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">view source</p>
-          </a>
-        </li>
-      </ul>
+      <div className="mt-8 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+        <ul className="font-sm flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+          <li>
+            <a
+              className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+              rel="noopener noreferrer me"
+              target="_blank"
+              href="https://www.linkedin.com/in/giselle-garcia-barroso/"
+            >
+              <ArrowIcon />
+              <span className="ml-2 h-7">
+                LinkedIn<span className="sr-only"> (opens in new tab)</span>
+              </span>
+            </a>
+          </li>
+          <li className="hidden">
+            <a
+              className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://vercel.com/templates/next.js/portfolio-starter-kit"
+            >
+              <ArrowIcon />
+              <span className="ml-2 h-7">
+                view source<span className="sr-only"> (opens in new tab)</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <SnowToggle />
+      </div>
       <p className="mt-8 text-neutral-600 dark:text-neutral-300 hidden">
         © {new Date().getFullYear()} MIT Licensed
       </p>

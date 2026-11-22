@@ -24,7 +24,7 @@ export function Hero() {
         <div className="mt-6 flex flex-wrap gap-3">
           <Button href="/#experience">View My Experience</Button>
           <Button href="/resume.pdf" variant="secondary" newTab>
-            View Resume
+            View Resume<span className="sr-only"> (PDF)</span>
           </Button>
         </div>
       </div>

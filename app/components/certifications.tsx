@@ -19,20 +19,20 @@ export function Certifications() {
         <p className="mt-1 text-neutral-700 dark:text-neutral-300">
           B.S. Environmental Systems, Ecology, Behavior & Evolution
         </p>
-        <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-500">
+        <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
           Graduated June 2024
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+      <ul role="list" className="grid grid-cols-2 gap-3 sm:grid-cols-3">
         {certifications.map((cert) => (
-          <div
+          <li
             key={cert}
             className="rounded-lg border border-neutral-200 p-4 text-sm font-medium text-neutral-800 dark:border-neutral-800 dark:text-neutral-200"
           >
             {cert}
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

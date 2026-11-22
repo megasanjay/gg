@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Snowflake } from "lucide-react";
+import { useSnowAvailable, useSnowPaused } from "./snow-store";
 
 const FLAKE_COUNT = 40;
 
@@ -25,12 +26,6 @@ type Flake = {
 };
 
 const randomWindDir = () => Math.random() * 2 - 1;
-
-// Snow season: November 15 through December 31 (inclusive), local time.
-function isSnowSeason(date: Date) {
-  const month = date.getMonth(); // 0-indexed: 10 = Nov, 11 = Dec
-  return (month === 10 && date.getDate() >= 15) || month === 11;
-}
 
 function makeFlakes(width: number, height: number): Flake[] {
   return Array.from({ length: FLAKE_COUNT }, () => {
@@ -61,12 +56,15 @@ export default function Snow() {
   const [flakes, setFlakes] = useState<Flake[] | null>(null);
   const nodes = useRef<(SVGSVGElement | null)[]>([]);
 
+  const available = useSnowAvailable();
+  const paused = useSnowPaused();
+  const active = available && !paused;
+
   useEffect(() => {
-    // Evaluated on the client so a statically built page still respects today's date.
-    if (!isSnowSeason(new Date())) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    setFlakes(makeFlakes(window.innerWidth, window.innerHeight));
-  }, []);
+    setFlakes(
+      active ? makeFlakes(window.innerWidth, window.innerHeight) : null,
+    );
+  }, [active]);
 
   useEffect(() => {
     if (!flakes) return;

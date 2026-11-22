@@ -46,16 +46,16 @@ export function Skills() {
             <h3 className="mb-3 text-lg font-medium tracking-tight">
               {category.title}
             </h3>
-            <div className="flex flex-wrap gap-2">
+            <ul role="list" className="flex flex-wrap gap-2">
               {category.items.map((item) => (
-                <span
+                <li
                   key={item}
                   className="rounded-full border border-neutral-200 px-3 py-1 text-sm text-neutral-700 dark:border-neutral-800 dark:text-neutral-300"
                 >
                   {item}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>

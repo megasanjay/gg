@@ -10,7 +10,8 @@ import Snow from "./components/snow";
 import BackToTop from "./components/back-to-top";
 import { baseUrl } from "./sitemap";
 
-const title = "Giselle Garcia | Environmental Compliance & Stormwater Management";
+const title =
+  "Giselle Garcia | Environmental Compliance & Stormwater Management";
 const description =
   "Environmental compliance and stormwater management specialist in California. Experienced in CGP and Caltrans inspections, SWPPP development, water quality monitoring, and SMARTS regulatory reporting.";
 
@@ -79,19 +80,31 @@ export default function RootLayout({
       className={cx(
         "text-black bg-white dark:text-white dark:bg-black",
         GeistSans.variable,
-        GeistMono.variable
+        GeistMono.variable,
       )}
     >
       <body className="antialiased max-w-3xl mx-4 mt-8 lg:mx-auto">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-70 focus:rounded-md focus:bg-neutral-900 focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white dark:focus:bg-white dark:focus:text-black"
+        >
+          Skip to content
+        </a>
         <Snow />
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+        <div className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
-          {children}
+          <main
+            id="main-content"
+            tabIndex={-1}
+            className="flex-auto min-w-0 flex flex-col focus:outline-none"
+          >
+            {children}
+          </main>
           <Footer />
-          <BackToTop />
-          <Analytics />
-          <SpeedInsights />
-        </main>
+        </div>
+        <BackToTop />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
